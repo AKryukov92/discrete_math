@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<style>
+		.plot{
+		    margin:3em;
+			float:left;
+			clear:both;
+		}
+		.plot>div{
+			float:left;
+		}
+		.plot .legend{
+			float:none;
+			text-align:center;
+			margin:1em 0 1em 0;
+			font-size:1.2em;
+		}
+		.curve{
+			border-bottom:0.2em solid black;
+			width:100%;
+		}
+		.section-line .curve{
+			border-top:0.2em solid black;
+			background:lightgray;
+			text-align:center;
+		}
+		.section-line {
+			text-align:center;
+		}
+		.section-end-r {
+			text-align:right;
+			direction:rtl;
+		}
+		.section-end-r .curve{
+			border-top:0.2em solid black;
+			border-radius:0 1em 0 0;
+			background:lightgray;
+		}
+		.section-end-l {
+			text-align:left;
+			direction:ltr;
+		}
+		.section-end-l .curve{
+			border-top:0.2em solid black;
+			border-radius:1em 0 0 0;
+			background:lightgray;
+		}
+		.section-empty .curve{
+			border-top:0.2em solid white;
+		}
+		.section-arrow-r {
+			text-align:right;
+			direction:rtl;
+		}
+		.section-arrow-r .curve {
+			border-top:0.2em solid white;
+			background: 
+			   linear-gradient(to top right,
+				   rgba(0,0,0,0) 0%,
+				   rgba(0,0,0,0) calc(50% - 2px),
+				   rgba(0,0,0,1) 25%,
+				   rgba(0,0,0,0) calc(50% + 0.8px),
+				   rgba(0,0,0,0) 100%);
+		}
+		</style>
+	</head>
+	<body>
+		<div class="plot">
+			<div class="section-line" style="width:100px;">
+				<div class="curve">&nbsp;</div>
+				<div class="label"></div>
+			</div>
+			<div class="section-end-r" style="width:100px;">
+				<div class="curve">&nbsp;</div>
+				<div class="label">a</div>
+			</div>
+			<div class="section-empty" style="width:100px;">
+				<div class="curve">&nbsp;</div>
+				<div class="label"></div>
+			</div>
+		</div>
+		<div class="plot">
+			<div class="legend">A</div>
+			<div class="section-empty" style="width:100px;">
+				<div class="curve">&nbsp;</div>
+				<div class="label"></div>
+			</div>
+			<div class="section-end-l" style="width:100px;">
+				<div class="curve">&nbsp;</div>
+				<div class="label">0</div>
+			</div>
+			<div class="section-line" style="width:100px;">
+				<div class="curve">&nbsp;</div>
+				<div class="label"></div>
+			</div>
+		</div>
+		
+		<div class="plot">
+			<div class="legend">MIN_ELEMENT <= i and i <= MAX_ELEMENT</div>
+			<div class="section-empty" style="width:40px;">
+				<div class="curve">&nbsp;</div>
+				<div class="label"></div>
+			</div>
+			<div class="section-end-l" style="width:60px;">
+				<div class="curve">&nbsp;</div>
+				<div class="label">MIN_ELEMENT</div>
+			</div>
+			<div class="section-line" style="width:220px;">
+				<div class="curve">Допустимые значения для i</div>
+				<div class="label"></div>
+			</div>
+			<div class="section-end-r" style="width:60px;">
+				<div class="curve">&nbsp;</div>
+				<div class="label">MAX_ELEMENT</div>
+			</div>
+			<div class="section-empty" style="width:40px;">
+				<div class="curve">&nbsp;</div>
+				<div class="label"></div>
+			</div>
+			<div class="section-arrow-r" style="width:10px">
+				<div class="curve">&nbsp;</div>
+				<div class="label">x</div>
+			</div>
+		</div>
+	</body>
+</html>
